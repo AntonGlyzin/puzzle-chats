@@ -1,0 +1,11 @@
+build:
+  docker:
+    web: Dockerfile
+  config:
+    DJANGO_SETTINGS_MODULE: bagchat.settings
+run:
+  web: bin/start-pgbouncer-stunnel daphne bagchat.asgi:application -p $PORT -b 0.0.0.0 --proxy-headers
+  worker: 
+    command:
+      - python manage.py beatserver
+    image: web

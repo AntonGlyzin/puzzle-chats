@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8002:8000"
+    networks:
+      - netapp
+    volumes:
+      - .:/app
+    command: python manage.py runserver 0.0.0.0:8000
+    # command: daphne bagchat.asgi:application -p 8000 -b 0.0.0.0 --proxy-headers
+    env_file:
+      - .env
+    depends_on:
+      - db          
+  db:
+    image: postgres:10-alpine
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    env_file:
+      - .env
+    ports:
+      - 5433:5432
+    networks:
+      - netapp
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8003:8080
+    networks:
+      - netapp
+    depends_on:
+      - db
+volumes:
+  pgdata:
+networks:
+  netapp:
+    driver: bridge
+  # redis:
+  #   image: redis:alpine
+  # celery:
+  #   restart: always
+  #   build:
+  #     context: .
+  #   command: celery -A bagchat worker -l info
+  #   volumes:
+  #     - . :/app
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     - db
+  #     - redis
+  #     - app
