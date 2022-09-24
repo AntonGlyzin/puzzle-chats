@@ -23,21 +23,7 @@
 - Также возможно писать личные сообщения и моментально получать на них ответы.
 
 ### Функционал frontend'a:
-Можно посмотреть [Здесь](https://github.com/AntonGlyzin/portfolio-puzzle)
+Можно посмотреть -> [ЗДЕСЬ](https://github.com/AntonGlyzin/portfolio-puzzle)
 
 ### Функционал интегрированного телеграм бота:
-Многофункциональный бот. Работает совместно с Django. Спектр задач этого бота следующий:
-- Интегрированна технологии от Гугла - общалка (dialogflow)
-- Умеет поздравлять в праздники  разными поздравлениями и контентом, от музыки до картинок.
-- Также поздравляет в дни рождения.
-- Умеет определять пол человека по имени, и в зависимости от пола выбирает поздравления.
-- Есть небольшая функция рандомной строки
-- При общение используются не только буквы, но и стикиры.
-- Есть возможность установить себе на сайт отправку сообщений сразу в телеграм.
-- Также добавленна возможность подтверждать регистрацию для портфолио(еще один проект) и изменять пароль.
-
-|Функционал|Демонстрация|
-|-|-|
-|Общалка|![botchat.gif](https://storage.googleapis.com/antonio-glyzin.appspot.com/portfolio/users/toshaglyzin/portfolio/posts/lGnHyjBnlqem6T97z9u1lsDRq2ClRuwP.gif)|
-|Начало общения с ботом. Установка дня рождения для поздравлений.|![botbeing.gif](https://storage.googleapis.com/antonio-glyzin.appspot.com/portfolio/users/toshaglyzin/portfolio/posts/gc2y8bx3jCz3Rn2nHypQPBZ8clliFNTe.gif)|
-|Изменения пароля от сайта с портфолио|![botpass.gif](https://storage.googleapis.com/antonio-glyzin.appspot.com/portfolio/users/toshaglyzin/portfolio/posts/PvhUFF6ZqRT6eUnmTMfx6BACQk7ndKMo.gif)|
+Многофункциональный бот. Работает совместно с Django. Спектр задач этого бота -> [ЗДЕСЬ](https://github.com/AntonGlyzin/puzzle-chats/tree/main/genie)
